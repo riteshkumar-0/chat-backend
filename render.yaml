@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: strapi-backend
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_HOST
+        value: your-database-host
+      - key: DATABASE_PORT
+        value: your-database-port
+      - key: DATABASE_NAME
+        value: your-database-name
+      - key: DATABASE_USERNAME
+        value: your-database-username
+      - key: DATABASE_PASSWORD
+        value: your-database-password
+      - key: JWT_SECRET
+        value: your-jwt-secret
+      - key: APP_KEYS
+        value: your-app-keys
